@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='identification_style.css') }}"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Gujarati Shikshak</title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-color:#EEEEEE;">
+    <!-- Navbar Start -->
+    <nav class=" navbar navbar-expand-lg mt-3 w-100 " style="height:9%; ">
+        <div class="container-fluid ">
+            <a class="nav-link " href="# " style="height:1%;border-radius:30px;color:white;background-color:black;padding:10px; ">Gujarati Shikshak</a>
+            <button class="navbar-toggler " type="button " data-bs-toggle="collapse " data-bs-target="#navbarNavAltMarkup " aria-controls="navbarNavAltMarkup " aria-expanded="false " aria-label="Toggle navigation ">
+  <span class="navbar-toggler-icon "></span>
+  </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup ">
+                <div class="navbar-nav ">
+                    <a class="nav-link active " id="ab " aria-current="page " href="# " style="border-radius:30px;color:white;background-color:black;margin:4px 3px; ">Home</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Landing Start -->
+    <section class="text-gray-600 body-font ">
+        <div class="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center ">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 "><img id="land " class="object-cover object-center rounded " data-aos="zoom-in" data-aos-duration="2000 " alt="hero " src="landing.jpeg"></div>
+            <div class=" lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 " data-aos="fade-left" data-aos-duration="2000 ">Gujarati Shikshak </h1>
+                <p class="mb-8 leading-relaxed " data-aos="fade-up" data-aos-duration="1000">Here we will not only teach you Gujarati language but will make you fall in love with Gujarati Langauge.</p>
+                <div class="flex justify-center "><a class="bottom " href="{{url_for( 'login')}} " style="text-decoration:none;"><button class="inline-flex btn-dark text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg " data-aos="fade-right" data-aos-duration="2000 ">Sign In</button></a>
+                    <a class="bottom " href="{{url_for( 'register')}} " style="text-decoration:none;"><button class="ml-4 inline-flex text-gray-700 btn-dark bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg "data-aos="fade-right" data-aos-duration="2000 ">Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Landing End -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+</html>

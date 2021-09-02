@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pretest1.css') }}">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+	        </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+
+    <!--div container1 start-->
+    {% block content %}
+    <form action="{{url_for('pretest')}}" method="post" ="post">
+    <div class="container col-sm-10 my-auto">
+        <div class="card  h-5 mt-5 w-100 pt-1">
+            <div class="card-body">
+                <b><p>{{ques[2]}}</p></b>
+                <b><p>{{ques[3]}}</p></b>
+            </div>
+        </div>
+        {% for item in ques[6] %}
+        <label>
+            <input type="radio" name="option"  id="option" class="card-input-element" value={{item[1]}} />
+                <div class="panel panel-default card-input border">
+                    <div class="panel-body p-2">
+                        <b>
+                        {{item[0]}}
+                        </b>
+                        <br>&nbsp;&nbsp;&nbsp;
+                        <b>{{item[1]}}</b>
+                    </div>
+                </div>
+        </label> 
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Next Question</button>
+        <button type="button" id="hint"class="btn btn-primary">Hint</button>
+        <input type="hidden" id="hint_count" name="hint_count" value="0"></input>
+        
+     </div>
+     </form>
+     <script type="text/javascript">
+        var count = 0;
+        var btn = document.getElementById("hint");
+        
+        btn.onclick = function () {
+            
+            if(count<=0){
+                count++;
+                alert('{{ques[4][0]}} \n{{ques[4][1]}} ')
+
+            }
+            else{
+                if(count==1){
+                count++;
+                alert('{{ques[5][0]}} \n{{ques[5][1]}} ')
+                }
+                else{
+                    alert('No More Hints')
+                }
+            }
+            document.getElementById("hint_count").value=count;
+            
+        }
+    </script>
+
+     {% endblock %}
+     
+</body>
+
+</html>

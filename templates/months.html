@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        tr,
+        td,
+        th {
+            border: none !important;
+        }
+        
+        #ab {
+            margin: 4px 3px;
+        }
+        
+        body {
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body style="background-image:url('blackboard.jpeg'); height: 100%;
+background-position-y: center;
+background-position-x:center;
+background-repeat: no-repeat;
+background-size: 75% 70%;
+background-color:#EEEEEE;
+">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg mt-2 w-100 " style="height:9%;">
+        <div class="container-fluid ">
+            <a class="nav-link " href="# " style="height:1%; width:15%;border-radius:30px;color:white;background-color:black;padding:10px;">Gujarati Shikshak</a>
+            <button class="navbar-toggler " type="button " data-bs-toggle="collapse " data-bs-target="#navbarNavAltMarkup " aria-controls="navbarNavAltMarkup " aria-expanded="false " aria-label="Toggle navigation ">
+		<span class="navbar-toggler-icon "></span>
+	  </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup ">
+                <div class="navbar-nav ">
+                    <a class="nav-link  active  " id="ab" aria-current="page " href="# " style="border-radius:30px;color:white;background-color:black;">Home</a>
+                </div>
+            </div>
+            <form>
+                <button class="btn btn-outline-success mt-3 " style="border-radius:30px;color:white;background-color:black;" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <!--navbar end-->
+    <div>
+        <table class="table mt-5 pr-5 table  w-50 " style="  margin-left:auto;margin-right:auto; ">
+            <thead>
+                <div>
+                    <tr class="text-white " style="line-height: 12px;">
+
+                        <th scope="col" class=" text-center ">Months in Gujarati </th>
+                        <th scope="col" class="text-center ">Months in English</th>
+
+                    </tr>
+                </div>
+            </thead>
+            <tbody>
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer;" onclick="playAudio('audio/months/january.ogg')">
+
+                        <td class="text-center ">&#2716;&#2750;&#2728;&#2765;&#2735;&#2753;&#2694;&#2736;&#2752;</td>
+                        <td class="text-center ">January</td>
+
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px; cursor: pointer; " onclick="playAudio('audio/months/february.ogg')">
+
+                        <td class="text-center ">&#2731;&#2759;&#2732;&#2765;&#2736;&#2753;&#2694;&#2736;&#2752;</td>
+                        <td class="text-center ">February</td>
+
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/march.ogg')">
+
+                        <td class="text-center ">&#2734;&#2750;&#2736;&#2765;&#2714;</td>
+                        <td class="text-center ">March</td>
+
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/april.ogg')">
+
+
+                        <td class="text-center ">&#2701;&#2730;&#2765;&#2736;&#2751;&#2738;</td>
+                        <td class="text-center ">April</td>
+
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/may.ogg')">
+
+                        <td class="text-center ">&#2734;&#2759;</td>
+                        <td class="text-center ">May</td>
+                    </tr>
+                </div>
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/june.ogg')">
+
+                        <td class="text-center ">&#2716;&#2754;&#2728;</td>
+                        <td class="text-center ">June</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/july.ogg')">
+
+                        <td class="text-center ">&#2716;&#2753;&#2738;&#2750;&#2695;</td>
+                        <td class="text-center ">July</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/august.ogg')">
+
+                        <td class="text-center ">&#46;&#2711;&#2744;&#2765;&#2719;</td>
+                        <td class="text-center ">August</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px;cursor: pointer; " onclick="playAudio('audio/months/september.ogg')">
+
+                        <td class="text-center ">&#2744;&#2730;&#2765;&#2719;&#2759;&#2734;&#2765;&#2732;&#2736;</td>
+                        <td class="text-center ">September</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px; cursor: pointer;" onclick="playAudio('audio/months/october.ogg')">
+
+                        <td class="text-center ">&#2707;&#2709;&#2765;&#2719;&#2763;&#2732;&#2736;</td>
+                        <td class="text-center ">October</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px; cursor: pointer;" onclick="playAudio('audio/months/november.ogg')">
+
+                        <td class="text-center ">&#2728;&#2741;&#2759;&#2734;&#2765;&#2732;&#2736;</td>
+                        <td class="text-center ">November</td>
+                    </tr>
+                </div>
+
+                <div>
+                    <tr class="text-white " style="line-height: 12px; cursor: pointer;" onclick="playAudio('audio/months/december.ogg')">
+
+                        <td class="text-center ">&#2721;&#2751;&#2744;&#2759;&#2734;&#2765;&#2732;&#2736;</td>
+                        <td class="text-center ">December</td>
+
+
+                    </tr>
+                </div>
+            </tbody>
+
+        </table>
+    </div>
+    <script>
+        function playAudio(url) {
+            new Audio(url).play();
+
+        }
+        // $("div").not(ele).each(function (index, audio) {
+        //                 audio.pause();
+        // }
+    </script>
+
+</body>
+
+</html>
